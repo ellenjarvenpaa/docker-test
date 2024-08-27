@@ -1,6 +1,6 @@
 # Assignment - First images and containers with Docker
 
-I'm using an example server from the User-centric Application Develoment course. To check that it works locally, I ran the commands `npm i` and `nm run dev`. After confirming it works, I initialized Docker using the `docker init` command.
+I'm using an example server from the User-centric Application Develoment course. To check that it works locally, I ran the commands `npm i` and `npm run dev`. After confirming it works, I initialized Docker using the `docker init` command.
 
 I reviewed the Dockerfile and added the watch configuration to the `compose.yaml` file. I also changed the host address to `0.0.0.0` in the `index.js` file.
 
