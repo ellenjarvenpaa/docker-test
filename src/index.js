@@ -4,9 +4,13 @@ import {fileURLToPath} from 'url';
 import mediaRouter from './routes/media-router.mjs';
 import userRouter from './routes/user-router.mjs';
 import authRouter from './routes/auth-router.mjs';
-import {errorHandler, logger, notFoundHandler} from './middlewares/middlewares.mjs';
+import {
+  errorHandler,
+  logger,
+  notFoundHandler,
+} from './middlewares/middlewares.mjs';
 
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 const app = express();
 const port = 3000;
 const __filename = fileURLToPath(import.meta.url);
@@ -31,7 +35,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 // render pug a file (home.pug) example
 app.get('/', (req, res) => {
-  const values = {title: "Dummy REST API docs", message: "TODO: docs"};
+  const values = {title: 'Dummy REST API docs', message: 'TODO: docs'};
   res.render('home', values);
 });
 
